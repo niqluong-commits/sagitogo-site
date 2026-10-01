@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>sagitogo — help and support</title>
+<link rel="icon" href="/favicon.png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Help with sagitogo: a forgotten parent PIN, a purchase that hasn't appeared, deleting everything, and how to get in touch.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root { --red:#D95643; --ink:#14302A; --paper:#F4F8F6; --light:#55736A; --border:#D8E3DE; --tint:#F7E3E0; }
+  body { margin:0; background:var(--paper); color:var(--ink);
+    font:400 17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif; }
+  .wrap { max-width:720px; margin:0 auto; padding:64px 24px; }
+  h1 { font-size:31px; margin:0 0 8px; letter-spacing:-.01em; }
+  h2 { font-size:20px; margin:34px 0 8px; letter-spacing:-.01em; }
+  p { color:var(--light); margin:0 0 26px; }
+  a.block { color:var(--red); display:block; margin:0 0 12px; font-weight:650; }
+  p a { color:var(--red); font-weight:650; }
+  .logo { display:block; width:200px; max-width:100%; height:auto; margin-bottom:24px; }
+  footer { margin-top:56px; padding-top:18px; border-top:1px solid var(--tint);
+    color:var(--light); font-size:14px; }
+  @media (max-width:600px) { .wrap { padding:32px 20px; } }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <img class="logo" src="/sagitogo-logo.png" width="384" height="140" alt="sagitogo">
+  <h1>Help with sagitogo</h1>
+
+  <h2>Getting in touch</h2>
+  <p>Email <a href="mailto:support@sagitogo.app">support@sagitogo.app</a>. A person reads it, and we aim to reply within two working days.</p>
+  <p>It helps to say which device you&rsquo;re on and what you were doing at the time. Please don&rsquo;t send anything about your child that we don&rsquo;t need &mdash; we hold no account for you and would rather not start one.</p>
+
+  <h2>Forgotten the parent PIN</h2>
+  <p>Tap <em>Forgotten your PIN?</em> on the keypad and enter the recovery word chosen when the PIN was set. That clears the PIN and lets you choose a new one. Nothing your family members have done is lost.</p>
+  <p>If the recovery word has gone too, we can&rsquo;t recover it for you &mdash; it never leaves the device, so we&rsquo;ve never had a copy. Reinstalling the app will let you set a fresh PIN, but it also clears the family members and their progress.</p>
+
+  <h2>A purchase has not appeared</h2>
+  <p>Open Parent Dashboard &rarr; Purchases and tap <em>Restore a previous purchase</em>. Purchases are tied to the App Store or Google Play account that made them, so restoring works on any device signed in to that account.</p>
+  <p>If it still doesn&rsquo;t appear, email us with the store receipt and we&rsquo;ll look into it.</p>
+
+  <h2>Deleting everything</h2>
+  <p>Parent Dashboard has an option that erases every family member, all their progress, your PIN and your recovery word. There&rsquo;s nothing to delete at our end, because nothing was ever sent to us.</p>
+
+  <h2>Privacy</h2>
+  <a class="block" href="/privacy">Read the privacy policy</a>
+
+<footer>&copy; <span id="cy">2026</span> QNL LTD</footer>
+</main>
+<script>
+(function () {
+  var now = new Date().getFullYear();
+  var el = document.getElementById('cy');
+  if (el && now > 2026) el.textContent = '2026–' + now;
+})();
+</script>
+</body>
+</html>
