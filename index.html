@@ -45,11 +45,14 @@
   .price strong { color:var(--ink); }
   .price h3 { font-size:19px; }
   .cols { display:grid; gap:16px; grid-template-columns:1fr 1fr; }
+  .items { display:flex; flex-wrap:wrap; align-items:center; gap:22px; margin:8px 0 8px; }
+  .items img { display:block; width:72px; height:72px; }
   .badge { display:inline-block; padding:12px 22px; border-radius:12px; background:var(--ink); color:#fff; font-weight:650; margin:6px 0 0; }
   .note { font-size:14px; }
   footer { margin-top:64px; padding-top:18px; border-top:1px solid var(--border); color:var(--light); font-size:14px; }
   footer a { color:var(--light); margin-right:16px; }
   @media (max-width:640px) {
+    .items { gap:18px; justify-content:center; }
     .wrap { padding:32px 20px; } h1 { font-size:30px; }
     .grid, .cols { grid-template-columns:1fr; } .fan { height:320px; } .fan img { width:170px; } .fan .l { transform:translateX(-50%) translateX(-85px) rotate(-12deg); } .fan .r { transform:translateX(-50%) translateX(85px) rotate(12deg); }
     .keeper { flex-direction:column; align-items:flex-start; } .keeper img { width:100%; }
@@ -99,6 +102,18 @@
 
   <h2>Every explorer deserves a companion</h2>
   <p>Children pick a robot to travel with, and it cheers them on as they practise. The adventure is better shared, too: cards can be swapped and gifted with family, as a request the other person can decline rather than something that happens to them.</p>
+
+  <p style="margin-top:22px">Everything in the shop is drawn for Sagitogo, from the helmet to the jetpack, and is spent on with gems earned by practising.</p>
+  <div class="items" aria-label="Some of the items to collect">
+    <img src="/img/items/space-helmet.png" width="72" height="72" alt="a space helmet" loading="lazy">
+    <img src="/img/items/jetpack.png" width="72" height="72" alt="a jetpack" loading="lazy">
+    <img src="/img/items/telescope.png" width="72" height="72" alt="a telescope" loading="lazy">
+    <img src="/img/items/toy-rocket.png" width="72" height="72" alt="a toy rocket" loading="lazy">
+    <img src="/img/items/space-guitar.png" width="72" height="72" alt="a space guitar" loading="lazy">
+    <img src="/img/items/terrarium.png" width="72" height="72" alt="a terrarium" loading="lazy">
+    <img src="/img/items/moon-pebble.png" width="72" height="72" alt="a moon pebble" loading="lazy">
+    <img src="/img/items/radio.png" width="72" height="72" alt="a radio" loading="lazy">
+  </div>
 
   <h2>For grown-ups</h2>
   <ul class="tick">
