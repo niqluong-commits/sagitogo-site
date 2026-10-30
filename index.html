@@ -48,9 +48,12 @@
   .items { display:flex; flex-wrap:wrap; align-items:center; gap:22px; margin:8px 0 8px; }
   .items img { display:block; width:72px; height:72px; }
   .sagito, p a.sagito { color:#2F7D6E; font-weight:650; }
-  .badge { display:inline-block; padding:12px 22px; border-radius:12px; background:var(--ink); color:#fff; font-weight:650; margin:6px 0 0; }
+  /* Apple's badge, unaltered. The padding is the clear space their guidelines require. */
+  a.badge { display:inline-block; padding:6px; vertical-align:middle; }
+  a.badge img { display:block; height:48px; width:auto; }
+  a.badge:active { opacity:.85; }
   /* Google's badge, unaltered; the PNG carries its own clear space. */
-  a.badge-play { display:inline-block; margin:6px 0 0; }
+  a.badge-play { display:inline-block; margin:6px 0 0; vertical-align:middle; }
   a.badge-play img { display:block; height:77px; width:auto; }
   a.badge-play:active { opacity:.85; }
   .note { font-size:14px; }
@@ -70,8 +73,11 @@
 
   <h1>Five minutes a day. Spelling, times tables and reasoning, at exactly the right level.</h1>
   <p class="lede">Sagitogo is short, quick practice that children actually finish. Every answer moves a mission forward, and every so often a robot is found and added to the collection.</p>
-  <p><a class="badge-play" href="https://play.google.com/store/apps/details?id=io.qnl.sagitogo&amp;hl=en_GB"><img src="/badges/get-it-on-google-play.png" width="646" height="250" alt="Get sagitogo on Google Play"></a></p>
-  <p class="note">Coming soon to the App Store. Available in the UK.</p>
+  <!-- Apple's own badge, used unaltered (their guidelines forbid a lookalike). The link uses the id form: the slug
+       in Apple's canonical URL comes from the app name, the id never changes. -->
+  <p><a class="badge" href="https://apps.apple.com/gb/app/id6819454906"><img src="/badges/download-on-the-app-store.svg" width="120" height="40" alt="Download Sagitogo on the App Store"></a>
+  <a class="badge-play" href="https://play.google.com/store/apps/details?id=io.qnl.sagitogo&amp;hl=en_GB"><img src="/badges/get-it-on-google-play.png" width="646" height="250" alt="Get sagitogo on Google Play"></a></p>
+  <p class="note">Available in the UK.</p>
 
   <h2>What it covers</h2>
   <div class="grid">
