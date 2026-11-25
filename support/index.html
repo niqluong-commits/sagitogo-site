@@ -21,11 +21,25 @@
   footer { margin-top:56px; padding-top:18px; border-top:1px solid var(--tint);
     color:var(--light); font-size:14px; }
   @media (max-width:600px) { .wrap { padding:32px 20px; } }
+  .top { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px 24px; margin:0 0 36px; }
+  .top .logo { display:block; margin:0; width:170px; height:auto; }
+  .top nav a { color:var(--ink); font-weight:650; font-size:15px; text-decoration:none; margin-left:20px; }
+  .top nav a:first-child { margin-left:0; }
+  .top nav a:hover { color:var(--red); }
 </style>
 </head>
 <body>
 <main class="wrap">
-  <img class="logo" src="/sagitogo-logo.png" width="384" height="140" alt="Sagito Go">
+  <header class="top">
+    <a href="/"><img class="logo" src="/sagitogo-logo.png" width="384" height="141" alt="Sagito Go"></a>
+    <nav aria-label="Sagito Go">
+      <a href="/#what-it-covers">What it covers</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/resources">Free resources</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/support">Help</a>
+    </nav>
+  </header>
   <h1>Help with Sagito Go</h1>
 
   <h2>Getting in touch</h2>
