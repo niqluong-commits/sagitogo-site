@@ -73,6 +73,24 @@
     .grid, .cols { grid-template-columns:1fr; } .fan { height:320px; } .fan img { width:170px; } .fan .l { transform:translateX(-50%) translateX(-85px) rotate(-12deg); } .fan .r { transform:translateX(-50%) translateX(85px) rotate(12deg); }
     .keeper { flex-direction:column; align-items:flex-start; } .keeper img { width:100%; }
   }
+
+  /* resources grid */
+  .rs-group { font-size:20px; margin:40px 0 14px; letter-spacing:-.01em; }
+  .rs-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin:0 0 8px; }
+  .rs-card { display:flex; gap:16px; background:#fff; border:1px solid var(--border); border-radius:14px; padding:14px; min-width:0; }
+  .rs-card:hover { border-color:var(--red); }
+  .rs-thumb { flex:none; width:112px; align-self:flex-start; }
+  .rs-thumb img { display:block; width:100%; height:auto; border-radius:6px; border:1px solid var(--border); box-shadow:0 3px 10px #14302a14; }
+  .rs-body { min-width:0; display:flex; flex-direction:column; }
+  .rs-body h3 { font-size:17px; line-height:1.3; margin:0 0 4px; }
+  .rs-body p { font-size:15px; line-height:1.5; margin:0 0 10px; color:var(--light); }
+  .rs-body .rs-note { font-size:12.5px; line-height:1.4; margin:0 0 10px; }
+  .rs-body a.rs-dl { margin-top:auto; align-self:flex-start; background:var(--red); color:#fff; font-weight:650; font-size:15px; padding:7px 14px; border-radius:999px; text-decoration:none; }
+  .rs-body a.rs-dl small { font-weight:500; opacity:.85; font-size:12.5px; }
+  .rs-body a.rs-dl:hover { opacity:.9; }
+  .rs-more { margin:18px 0 0; }
+  @media (max-width:700px) { .rs-grid { grid-template-columns:1fr; } .rs-thumb { width:96px; } }
+  /* end resources grid */
 </style>
 </head>
 <body>
@@ -90,47 +108,52 @@
 
   <h1>Free resources</h1>
   <p class="lede">Things to print and use at home, whether or not you ever download Sagito Go. No sign-up, no email address.</p>
-
-  <h2>Printable times tables</h2>
-  <p>Three A4 pages: the 12 &times; 12 times tables square, every table from 1 to 12 with the answers, and a blank practice sheet to fill in and check.</p>
-  <div class="res">
-    <a class="block" href="/resources/sagito-go-times-tables.pdf" download>Download the times tables (PDF, A4, about 250 KB)</a>
+  <!-- resources:start -->
+  <h2 class="rs-group">Maths</h2>
+  <div class="rs-grid">
+    <article class="rs-card">
+      <a class="rs-thumb" href="/resources/sagito-go-times-tables.pdf" download tabindex="-1" aria-hidden="true"><img src="/resources/thumbs/sagito-go-times-tables.jpg" width="300" height="424" alt="" loading="lazy"></a>
+      <div class="rs-body"><h3>Printable times tables</h3><p>The 12 &times; 12 square, every table from 1 to 12 with the answers, and a blank practice sheet.</p><a class="rs-dl" href="/resources/sagito-go-times-tables.pdf" download>Download PDF <small>&middot; 3 pages</small></a></div>
+    </article>
+    <article class="rs-card">
+      <a class="rs-thumb" href="/resources/sagito-go-multiplication-gaps.pdf" download tabindex="-1" aria-hidden="true"><img src="/resources/thumbs/sagito-go-multiplication-gaps.jpg" width="300" height="424" alt="" loading="lazy"></a>
+      <div class="rs-body"><h3>Times tables: gaps and missing numbers</h3><p>A square with gaps to fill in, 36 missing-number questions such as 7 &times; ? = 56, and the answers.</p><a class="rs-dl" href="/resources/sagito-go-multiplication-gaps.pdf" download>Download PDF <small>&middot; 3 pages</small></a></div>
+    </article>
+    <article class="rs-card">
+      <a class="rs-thumb" href="/resources/sagito-go-division-facts.pdf" download tabindex="-1" aria-hidden="true"><img src="/resources/thumbs/sagito-go-division-facts.jpg" width="300" height="424" alt="" loading="lazy"></a>
+      <div class="rs-body"><h3>Division facts</h3><p>The tables in reverse: every division fact from 1 to 12, 60 practice questions and the answers.</p><a class="rs-dl" href="/resources/sagito-go-division-facts.pdf" download>Download PDF <small>&middot; 3 pages</small></a></div>
+    </article>
   </div>
-  <h2>Times tables: gaps and missing numbers</h2>
-  <p>Once the tables are familiar: a square with gaps to fill in, thirty-six missing-number questions such as 7 &times; ? = 56 that make you work backwards, and all the answers.</p>
-  <div class="res">
-    <a class="block" href="/resources/sagito-go-multiplication-gaps.pdf" download>Download gaps and missing numbers (PDF, A4, about 250 KB)</a>
+  <h2 class="rs-group">Spelling and grammar</h2>
+  <div class="rs-grid">
+    <article class="rs-card">
+      <a class="rs-thumb" href="/resources/sagito-go-ks2-spelling-lists.pdf" download tabindex="-1" aria-hidden="true"><img src="/resources/thumbs/sagito-go-ks2-spelling-lists.jpg" width="300" height="424" alt="" loading="lazy"></a>
+      <div class="rs-body"><h3>KS2 spelling lists</h3><p>The statutory lists for Years 3 and 4 and Years 5 and 6, with tick boxes and a look, say, cover, write, check sheet.</p><p class="rs-note">Word lists from the national curriculum for England, &copy; Crown copyright, under the Open Government Licence.</p><a class="rs-dl" href="/resources/sagito-go-ks2-spelling-lists.pdf" download>Download PDF <small>&middot; 3 pages</small></a></div>
+    </article>
+    <article class="rs-card">
+      <a class="rs-thumb" href="/resources/sagito-go-ks2-spelling-tracker.pdf" download tabindex="-1" aria-hidden="true"><img src="/resources/thumbs/sagito-go-ks2-spelling-tracker.jpg" width="300" height="424" alt="" loading="lazy"></a>
+      <div class="rs-body"><h3>KS2 spelling tracker</h3><p>A row for every word with three tick boxes: practised, right a week later, right a month later.</p><a class="rs-dl" href="/resources/sagito-go-ks2-spelling-tracker.pdf" download>Download PDF <small>&middot; 2 pages</small></a></div>
+    </article>
+    <article class="rs-card">
+      <a class="rs-thumb" href="/resources/sagito-go-spot-the-mistake.pdf" download tabindex="-1" aria-hidden="true"><img src="/resources/thumbs/sagito-go-spot-the-mistake.jpg" width="300" height="424" alt="" loading="lazy"></a>
+      <div class="rs-body"><h3>Spot the mistake</h3><p>Twenty-four sentences, each with one spelling mistake to circle and correct, with answers.</p><a class="rs-dl" href="/resources/sagito-go-spot-the-mistake.pdf" download>Download PDF <small>&middot; 3 pages</small></a></div>
+    </article>
   </div>
-  <h2>Division facts</h2>
-  <p>Division is the times tables backwards. Every table from 1 to 12 as division facts, sixty practice questions to fill in, and the answers.</p>
-  <div class="res">
-    <a class="block" href="/resources/sagito-go-division-facts.pdf" download>Download division facts (PDF, A4, about 175 KB)</a>
+  <h2 class="rs-group">Vocabulary and reading</h2>
+  <div class="rs-grid">
+    <article class="rs-card">
+      <a class="rs-thumb" href="/resources/sagito-go-word-a-day.pdf" download tabindex="-1" aria-hidden="true"><img src="/resources/thumbs/sagito-go-word-a-day.jpg" width="300" height="424" alt="" loading="lazy"></a>
+      <div class="rs-body"><h3>A word a day</h3><p>One ambitious word for every school day, 195 in all, getting harder through the year, plus a notebook page.</p><a class="rs-dl" href="/resources/sagito-go-word-a-day.pdf" download>Download PDF <small>&middot; 14 pages</small></a></div>
+    </article>
   </div>
-  <h2>KS2 spelling lists</h2>
-  <p>The statutory spelling lists for Years 3 and 4 and Years 5 and 6, with tick boxes and a look, say, cover, write, check practice sheet. Word lists from the national curriculum for England, &copy; Crown copyright, under the Open Government Licence.</p>
-  <div class="res">
-    <a class="block" href="/resources/sagito-go-ks2-spelling-lists.pdf" download>Download the KS2 spelling lists (PDF, A4, about 200 KB)</a>
+  <h2 class="rs-group">Puzzles and games</h2>
+  <div class="rs-grid">
+    <article class="rs-card">
+      <a class="rs-thumb" href="/resources/sagito-go-spelling-word-searches.pdf" download tabindex="-1" aria-hidden="true"><img src="/resources/thumbs/sagito-go-spelling-word-searches.jpg" width="300" height="424" alt="" loading="lazy"></a>
+      <div class="rs-body"><h3>Spelling word searches</h3><p>Four puzzles built from the spelling lists, some with words running backwards, with answers.</p><a class="rs-dl" href="/resources/sagito-go-spelling-word-searches.pdf" download>Download PDF <small>&middot; 5 pages</small></a></div>
+    </article>
   </div>
-  <h2>KS2 spelling tracker</h2>
-  <p>One page for each list, with a row for every word and three tick boxes: practised, right a week later, right a month later. Fill it in as the words become secure.</p>
-  <div class="res">
-    <a class="block" href="/resources/sagito-go-ks2-spelling-tracker.pdf" download>Download the spelling tracker (PDF, A4, about 270 KB)</a>
-  </div>
-  <h2>Spelling word searches</h2>
-  <p>Four 15 &times; 15 puzzles built from the spelling lists: double letters and long words for Years 3 and 4, double letters and word endings for Years 5 and 6. The Years 5 and 6 puzzles have some words running backwards. Answers included.</p>
-  <div class="res">
-    <a class="block" href="/resources/sagito-go-spelling-word-searches.pdf" download>Download the word searches (PDF, A4, about 700 KB)</a>
-  </div>
-  <h2>Spot the mistake</h2>
-  <p>Two sheets of twelve sentences, each with one spelling mistake to circle and correct, for Years 3 and 4 and Years 5 and 6, with an answer page.</p>
-  <div class="res">
-    <a class="block" href="/resources/sagito-go-spot-the-mistake.pdf" download>Download spot the mistake (PDF, A4, about 130 KB)</a>
-  </div>
-  <h2>A word a day</h2>
-  <p>One ambitious word for every school day of the year, 195 in all, each with how to say it, a plain meaning, an example sentence and the ordinary word it replaces. The last page is a notebook to fill in. They are the same words as the Word of the Day card on the Sagito Go home screen.</p>
-  <div class="res">
-    <a class="block" href="/resources/sagito-go-word-a-day.pdf" download>Download A word a day (PDF, A4, about 800 KB)</a>
-  </div>
+  <!-- resources:end -->
   <p>Preparing for the 11+? <a class="sagito" href="https://www.sagito.app/resources/">Sagito has free resources for parents</a> too.</p>
 
   <p>
