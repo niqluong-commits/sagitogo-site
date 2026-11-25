@@ -21,6 +21,14 @@
   p { color:var(--light); margin:0 0 20px; }
   p a, li a { color:var(--red); font-weight:650; }
   .logo { display:block; width:230px; max-width:100%; height:auto; margin-bottom:32px; }
+  .top { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px 24px; margin-bottom:32px; }
+  .top .logo { margin:0; }
+  .top nav a { color:var(--ink); font-weight:650; font-size:15px; text-decoration:none; margin-left:20px; }
+  .top nav a:first-child { margin-left:0; }
+  .top nav a:hover { color:var(--red); }
+  .res a.block { display:block; background:var(--card); border:1px solid var(--border); border-radius:14px; padding:14px 18px; margin:0 0 10px; color:var(--ink); font-weight:650; text-decoration:none; }
+  .res a.block:hover { border-color:var(--red); }
+  h2[id] { scroll-margin-top:16px; }
   .lede { font-size:21px; color:var(--ink); max-width:640px; }
   .tick { list-style:none; padding:0; margin:0 0 20px; }
   .tick li { color:var(--light); padding-left:26px; position:relative; margin:0 0 8px; }
@@ -69,7 +77,16 @@
 </head>
 <body>
 <main class="wrap">
-  <img class="logo" src="/sagitogo-logo.png" width="384" height="141" alt="Sagito Go">
+  <header class="top">
+    <a href="/"><img class="logo" src="/sagitogo-logo.png" width="384" height="141" alt="Sagito Go"></a>
+    <nav aria-label="Sagito Go">
+      <a href="#what-it-covers">What it covers</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#free-resources">Free resources</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/support">Help</a>
+    </nav>
+  </header>
 
   <h1>Five minutes a day. Spelling, times tables and reasoning, at exactly the right level.</h1>
   <p class="lede">Sagito Go is short, quick practice that children actually finish. Every answer moves a mission forward, and every so often a robot is found and added to the collection.</p>
@@ -79,7 +96,7 @@
   <a class="badge-play" href="https://play.google.com/store/apps/details?id=io.qnl.sagitogo&amp;hl=en_GB"><img src="/badges/get-it-on-google-play.png" width="646" height="250" alt="Get Sagito Go on Google Play"></a></p>
   <p class="note">Available in the UK.</p>
 
-  <h2>What it covers</h2>
+  <h2 id="what-it-covers">What it covers</h2>
   <div class="grid">
     <div class="tile"><h3>Spelling</h3><p>From common words to the tricky ones, with wrong answers that look like real slips.</p></div>
     <div class="tile"><h3>Times tables</h3><p>Recall, division, missing numbers and beyond. Quick recall, not working out.</p></div>
@@ -135,13 +152,18 @@
   </ul>
   <p><a href="/privacy">Read the privacy policy</a></p>
 
-  <h2>Free, and one purchase for the rest</h2>
+  <h2 id="pricing">Free, and one purchase for the rest</h2>
   <div class="cols">
     <div class="price"><h3>Free</h3>
       <ul class="tick"><li>One family member</li><li>The starting range of every subject</li><li>The first two stations of robots</li></ul></div>
     <div class="price"><h3>Full unlock &mdash; &pound;7.99, once</h3>
       <ul class="tick"><li>Every level and every times table</li><li>All five stations and every robot card</li><li>Up to four family members</li></ul>
       <p class="note" style="margin:0">No subscription. Ever.</p></div>
+  </div>
+
+  <h2 id="free-resources">Free resources</h2>
+  <div class="res">
+    <a class="block" href="/resources/sagito-go-times-tables.pdf" download>Printable times tables (PDF, A4): the 12 &times; 12 square, every table with answers, and a blank practice sheet</a>
   </div>
 
   <h2>Kept accurate</h2>
